@@ -1,0 +1,23 @@
+{
+  "name": "wc_schwan",
+  "version": "1.0.0",
+  "description": "Bot for Podcast UFO Telegram Group",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "WC_Ente",
+    "PUFO",
+    "Telegram",
+    "Bot",
+    "Podcast",
+    "UFO"
+  ],
+  "author": "Christian Ziermann",
+  "license": "ISC",
+  "dependencies": {
+    "fs": "0.0.1-security",
+    "telebot": "^1.2.6"
+  }
+}
