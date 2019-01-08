@@ -54,9 +54,23 @@ self.getRandomQuote = function () {
         return self.quotes[self.getRandomInt(self.quotes.length)];
     }
 }
+self.sendHelp = function () {
+    return "Write !quote to get an quote.";
+}
+
+self.runCommand = function (message) {
+    var comamnd = message.text;
+    switch (comamnd) {
+        case "!help":
+            return self.sendHelp();
+        case "!quote":
+            return self.getRandomQuote();
+    }
+        
+}
 
 Promise.all([self.loadToken, self.loadQuotes]).then(function () {
     self.init();
-    self.bot.on('text', (msg) => msg.reply.text(self.getRandomQuote()));
+    self.bot.on('text', (msg) => msg.reply.text(self.runCommand(msg)));
     self.bot.start();
 });

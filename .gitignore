@@ -1,1 +1,3 @@
-/tokenfile/
+./tokenfile
+./node_modules
+./vscode
